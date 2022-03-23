@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload="func()">
+    <H1>Tilbudsgenerator</H1>
+    <form id="form" action="#">
+        <input requierd type="text" name="navn" id="navn" placeholder="Kunde navn"> <br>
+        <input requierd type="text" name="hnavn" id="hnavn" placeholder="Hjelper navn"> <br><br>
+
+        <label for="50mb">50 mbit - pris: 399,00</label>
+        <input type="radio" name="internett" value="0" checked="checked">  <br>
+        <label for="50mb">100 mbit - pris: 599,00</label>
+        <input type="radio" name="internett" value="1"> <br>
+        <label for="50mb">300 mbit - pris: 799,00</label>
+        <input type="radio" name="internett" value="2"> <br>
+        <label for="50mb">500 mbit - pris: 999,00</label>
+        <input type="radio" name="internett" value="3" required> <br>
+        <br><br>
+
+
+        <label for="dekoder">Ekstra TV-dekoder - pris: 399,00 - max: 3</label>
+        <input type="checkbox" name="dekoder" id="dekoder">
+        <div class="plussdekoder" id="plussdekoder">
+            <label for="dekodernum">Antall</label>
+            <input max="3" min="1" type="number" name="dekodernum" id="dekodernum" value="1">
+        </div>
+        <br><br>
+
+        <label for="extender">Wifi-extender - pris: 499,00 - max: 3</label>
+        <input type="checkbox" name="extender" id="extender">
+        <div class="plussextender" id="plussextender">
+            <label for="extendernum">Antall</label>
+            <input max="3" min="1" type="number" name="extendernum" id="extendernum" value="1">
+        </div>
+        <br><br>
+        <h3>Rabatter <input type="checkbox" name="rabattere" id="rabattere"></h3> 
+        <div id="rabatter"></div>
+        <br>
+        <input type="submit" value="Generate mail"> 
+        <br><br>
+
+        <div id="mail" class="mail"></div><br>
+    </form>
+    
+    <button id='again'>Restet</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
